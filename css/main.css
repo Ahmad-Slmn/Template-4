@@ -11,8 +11,7 @@
 }
 
 body {
-    font-family: "Work Sans", sans-serif;
-    overflow: hidden
+    font-family: "Work Sans", sans-serif
 }
 
 html {
@@ -129,7 +128,9 @@ html {
 
 /* Start My Header */
 .header {
-    padding: 20px
+    padding: 20px;
+    position: relative;
+    overflow: hidden !important
 }
 
 .header .contener {
@@ -143,80 +144,13 @@ html {
     width: 60px
 }
 
-.header .contener .links {
-overflow: hidden !important
-
-}
-
-.header .contener .links ul::before {
-    content: '';
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
-    position: absolute;
-    right: 9px;
-    top: -19px
-}
-
-.header .contener .links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: #f6f6f6;
-    position: absolute;
-    right: 90px;
-    min-width: 200px;
-    z-index: 99;
-    top: 50px;
-    transform: translateX(310px);
-    transition: all .8s;
-    display: inline-block;
-    box-shadow: 0 3px 5px rgb(0, 0, 0, .5);
-    border-radius: 10px
-}
-
-.header .contener .links ul.show {
-    transform: translateX(0) !important
-}
-
-.header .contener .links ul li:first-of-type{border-radius: 10px}
-
-
-.header .contener .links ul li a {
-    text-decoration: none;
-    display: block;
-    padding: 15px;
-    color: #333;
-    transition: 0.4s;
-    border-radius: inherit
-}
-
-.header .contener .links ul li a:hover {
-    padding-left: 25px;
-    background-color: #fff
-}
-
-.header .contener .links ul li:not(:last-child) a {
-    border-bottom: 1px solid #ddd
-}
-
-
-.header .icon:hover span:nth-child(2) {
-    width: 100%
-}
-
-
-.header .icon::before.active{display: block !important}
-
 .header .icon {
     width: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 100px
+    position: relative
 }
 
 .header .icon span {
@@ -228,6 +162,11 @@ overflow: hidden !important
 
 }
 
+.header .icon:hover span:nth-child(2) {
+    width: 100%
+}
+
+
 .header .icon span:first-child {
 
     width: 100%;
@@ -238,6 +177,56 @@ overflow: hidden !important
 
     width: 50%;
     transition: 0.4s
+}
+
+.header ul::before {
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 9px;
+    top: -19px
+}
+
+.header ul {
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 90px;
+    width: 200px;
+    z-index: 10;
+    top: 50px;
+    transform: translateX(310px);
+    transition: all .8s;
+    box-shadow: 0 3px 5px rgb(0, 0, 0, .5);
+    border-radius: 10px
+}
+
+.header ul.show {
+    transform: translateX(0) !important
+}
+
+.header ul li:first-of-type {
+    border-radius: 10px
+}
+
+
+.header ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: 0.4s;
+    border-radius: inherit
+}
+
+.header ul li a:hover {
+    padding-left: 25px;
+    background-color: #fff
+}
+
+.header ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd
 }
 
 /* End My Header */
@@ -338,7 +327,6 @@ overflow: hidden !important
     .contact .info .link {
         font-size: 13px !important
     }
-
 
 
     .contact .info .label {
@@ -642,8 +630,9 @@ overflow: hidden !important
         font-size: 25px
     }
 
-    .header .icon, .header .contener .links ul {
-        right: 10px !important
+    .header .contener {
+        padding: 0;
+        margin: 0
     }
 
 }
