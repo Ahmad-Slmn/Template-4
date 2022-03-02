@@ -1,17 +1,15 @@
 $(function () {
     $(".icon").click(function () {
 
-        $(".links").toggleClass("show")
+        $(".links ul").toggleClass("show")
     })
-
-   
-
+    
     // Smoothly Scroll To Elment
-    $(".links li a").click(function (e) {
+    $(".links ul li a").click(function (e) {
 
         e.preventDefault();
 
-        $(".links").toggleClass("show");
+        $(".links ul").toggleClass("show");
 
         document.querySelector($(this).data("section")).scrollIntoView({
 

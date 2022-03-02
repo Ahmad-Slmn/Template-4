@@ -144,13 +144,16 @@ html {
     width: 60px
 }
 
+.header .links {
+  position: relative;
+}
+
 .header .icon {
     width: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    cursor: pointer;
-    position: relative
+    cursor: pointer
 }
 
 .header .icon span {
@@ -191,7 +194,7 @@ html {
 
 .header ul {
     background-color: #f6f6f6;
-    position: absolute;
+    position:absolute;
     right: 90px;
     width: 200px;
     z-index: 10;
@@ -201,6 +204,7 @@ html {
     box-shadow: 0 3px 5px rgb(0, 0, 0, .5);
     border-radius: 10px
 }
+
 
 .header ul.show {
     transform: translateX(0) !important
