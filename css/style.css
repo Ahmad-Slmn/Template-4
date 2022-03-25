@@ -129,8 +129,7 @@ html {
 /* Start My Header */
 .header {
     padding: 20px;
-    position: relative;
-    overflow: hidden !important
+    position: relative
 }
 
 .header .contener {
@@ -145,7 +144,7 @@ html {
 }
 
 .header .links {
-  position: relative;
+    position: relative;
 }
 
 .header .icon {
@@ -160,15 +159,12 @@ html {
     background-color: #333333a8;
     margin-bottom: 5px;
     height: 2px;
-    width: 100%;
-
-
-}
-
-.header .icon:hover span:nth-child(2) {
     width: 100%
 }
 
+.header .icon span:nth-child(2) {
+    transition: 0.4s
+}
 
 .header .icon span:first-child {
 
@@ -176,7 +172,7 @@ html {
 
 }
 
-.header .icon span:nth-child(2) {
+.header .icon span:nth-child(2).width {
 
     width: 50%;
     transition: 0.4s
@@ -189,25 +185,20 @@ html {
     border-color: transparent transparent #f6f6f6 transparent;
     position: absolute;
     right: 9px;
-    top: -19px
+    top: -21px
 }
 
 .header ul {
     background-color: #f6f6f6;
-    position:absolute;
-    right: 90px;
+    position: absolute;
+    right: 0;
     width: 200px;
     z-index: 10;
-    top: 50px;
-    transform: translateX(310px);
-    transition: all .8s;
+    top: 28px;
+    transition: display 1s;
     box-shadow: 0 3px 5px rgb(0, 0, 0, .5);
-    border-radius: 10px
-}
-
-
-.header ul.show {
-    transform: translateX(0) !important
+    border-radius: 10px;
+    display: none
 }
 
 .header ul li:first-of-type {

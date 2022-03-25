@@ -1,15 +1,20 @@
+/* global $ document window */
 $(function () {
     $(".icon").click(function () {
 
-        $(".links ul").toggleClass("show")
+        $(".links ul").fadeToggle("slow");
+
+        $(".header .icon span:nth-of-type(2)").toggleClass("width")
     })
-    
+
     // Smoothly Scroll To Elment
     $(".links ul li a").click(function (e) {
 
         e.preventDefault();
 
-        $(".links ul").toggleClass("show");
+        $(".links ul").fadeToggle("slow");
+
+        $(".header .icon span:nth-of-type(2)").toggleClass("width")
 
         document.querySelector($(this).data("section")).scrollIntoView({
 
